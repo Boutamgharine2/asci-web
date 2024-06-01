@@ -1,13 +1,11 @@
 package ascii
 
 import (
-	"fmt"
 	"os"
 	"strings"
 )
 
 func Printing(s, r string) string {
-	fmt.Println("==>", s)
 	s = strings.ReplaceAll(s, "\r\n", "\n")
 	if Checkinput(s) {
 		style := r + ".txt"
