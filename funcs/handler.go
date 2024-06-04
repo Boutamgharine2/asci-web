@@ -27,12 +27,9 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("tmplt/tmplt.html"))
 	r.ParseForm()
 	if r.URL.Path != "/" {
-		http.Error(w, "page not found", 404)
+		http.Error(w, "page not fond", http.StatusNotFound )
 		return
 	}
-	// 	if r.Form.Get("submit") {
-	// Asciiart(w,r)
-	// }
 
 	tmpl.Execute(w, nil)
 }

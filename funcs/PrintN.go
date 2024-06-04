@@ -7,13 +7,7 @@ import (
 func PrintN(inputfile *os.File, v []string) string {
 	c := ""
 
-	if Checker(v) {
-		for k := 0; k < len(v)-1; k++ {
-			c += "\n"
-		}
 
-		return c
-	}
 
 	for _, word := range v {
 		var char []string

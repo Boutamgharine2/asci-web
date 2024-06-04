@@ -6,7 +6,9 @@ import (
 )
 
 func Printing(s, r string) string {
+   
 	s = strings.ReplaceAll(s, "\r\n", "\n")
+
 	if Checkinput(s) {
 		style := r + ".txt"
 
